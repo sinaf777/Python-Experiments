@@ -1,2 +1,6 @@
 # Dollar-to-ETB-converter
-Dollar to ETB converter using python
+print("Dollar to ETB converter using python")
+dollar = input("enter amount in $: ")
+dollar = float(dollar)
+birr = dollar * 140
+print(birr, "Birr")
