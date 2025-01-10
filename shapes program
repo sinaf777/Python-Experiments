@@ -1,0 +1,55 @@
+def my_func():
+    n = 8
+    for i in range(n):
+        for j in range(n):
+            print('*', end=' ')
+        print()
+
+def my_func2():
+    n = 8
+    for i in range(n):
+        for j in range(i + 1):
+            print('*', end=' ')
+        print()
+
+def my_func3():
+    n = 8
+    for i in range(n):
+        for j in range(i, n):
+            print('*', end=' ')
+        print()
+
+def my_func4():
+    n = 8
+    for i in range(n):
+        for j in range(i, n):
+            print(' ', end=' ')
+        for j in range(2 * i + 1):
+            print('*', end=' ')
+        print()
+
+while True:
+    try:
+        print("\nMenu:")
+        print("1. Print a square pattern (8x8)")
+        print("2. Print a right-angled triangle")
+        print("3. Print an inverted right-angled triangle")
+        print("4. Print a pyramid pattern")
+        print("5. Exit")
+        x = int(input("Enter your choice (1-5): "))
+        
+        if x == 1:
+            my_func()
+        elif x == 2:
+            my_func2()
+        elif x == 3:
+            my_func3()
+        elif x == 4:
+            my_func4()
+        elif x == 5:
+            print("Exiting program.")
+            break
+        else:
+            print("Invalid choice. Please choose a number between 1 and 5.")
+    except ValueError:
+        print("Invalid input. Please enter a number between 1 and 5.")
